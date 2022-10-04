@@ -14,11 +14,12 @@ export class Button {
     if (this.element.classList.contains('is-loading')) {
       this.element.disabled = true;
       this.textElement.textContent = 'Загрузка';
-      this.element.style.width = `${this.width}px`;
+
     } else {
       this.element.disabled = false;
       this.textElement.textContent = this.text;
-      this.element.style.width = 'auto';
     }
+
+    this.element.style.width = `${this.width}px`;
   }
 }
