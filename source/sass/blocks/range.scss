@@ -1,0 +1,179 @@
+.range {
+  position: relative;
+
+  color: #333e48;
+
+  @include vp-768 {
+    color: #575757;
+  }
+}
+
+.range__label {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 8px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: $ff-gilroy;
+
+  @include vp-768 {
+    margin-bottom: 24px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.range__field {
+  position: relative;
+
+  height: 60px;
+
+  @include vp-768 {
+    height: 68px;
+  }
+}
+
+.range__field-input {
+  width: 100%;
+  height: 100%;
+  padding-right: 50px;
+  padding-left: 20px;
+
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  color: inherit;
+
+  background: #f3f3f4;
+  border: none;
+  border-radius: 16px;
+
+  @include vp-768 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  &:focus {
+    background: transparent;
+    outline: none;
+    box-shadow: inset 0 0 0 2px #f3f3f4;
+  }
+}
+
+.range--percent .range__field-input {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+
+  width: 67px;
+  height: 48px;
+  padding-right: 28px;
+  padding-left: 12px;
+
+  background-color: #e0e0e0;
+
+  @include vp-768 {
+    top: 7px;
+    right: 7px;
+
+    width: 70px;
+    height: 54px;
+
+    font-size: 22px;
+    line-height: 20px;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  input[type="number"],
+  input[type="number"]:hover,
+  input[type="number"]:focus {
+    appearance: none;
+  }
+}
+
+.range__field-label {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 22px;
+  line-height: 20px;
+
+  pointer-events: none;
+
+  @include vp-768 {
+    top: 16px;
+    right: 16px;
+
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.range--percent .range__field-label--correction {
+  right: 17px;
+
+  pointer-events: none;
+
+  @include vp-768 {
+    top: 24px;
+    right: 20px;
+
+    font-size: 22px;
+    line-height: 20px;
+  }
+}
+
+.range--percent .range__field-result {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 80px;
+  padding-left: 20px;
+
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+
+  background: #f3f3f4;
+  border-radius: 16px;
+
+  @include vp-768 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+.range__slider {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+
+  height: 2px;
+
+  appearance: none;
+
+  &::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+
+    background-color: $color-dark-tangerine;
+    border-radius: 50%;
+    cursor: pointer;
+
+    appearance: none;
+  }
+}

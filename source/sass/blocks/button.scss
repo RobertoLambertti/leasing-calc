@@ -1,0 +1,81 @@
+.button {
+  width: 100%;
+  min-height: 60px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  font-family: $ff-nekst;
+  color: $color-default-white;
+
+  background: $color-dark-tangerine;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+
+  transition: background $trans-default;
+
+  @include vp-768 {
+    width: auto;
+    height: 68px;
+    padding-right: 52px;
+    padding-left: 52px;
+
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      background: $color-default-black;
+    }
+  }
+
+  @media screen {
+    &:active {
+      background: #575757;
+    }
+
+    &:disabled {
+      background: $color-dark-tangerine;
+      opacity: 0.5;
+    }
+
+    &.is-loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      cursor: default;
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover {
+          background: $color-dark-tangerine;
+        }
+      }
+
+      &:active {
+        background: $color-dark-tangerine;
+      }
+
+      &:disabled {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.button.is-loading .button__text {
+  font-size: 0;
+  line-height: 0;
+}
+
+.button.is-loading .button__spinner {
+  display: block;
+}
+
+.button__spinner {
+  display: none;
+}

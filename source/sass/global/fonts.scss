@@ -1,0 +1,32 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Rouble";
+
+  font-display: swap;
+  src:
+    url("../fonts/rouble.woff2") format("woff2"),
+    url("../fonts/rouble.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Gilroy";
+
+  font-display: swap;
+  src:
+    url("../fonts/gilroy-regular.woff2") format("woff2"),
+    url("../fonts/rgilroy-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  font-family: "Nekst";
+
+  font-display: swap;
+  src:
+    url("../fonts/nekst-black.woff2") format("woff2"),
+    url("../fonts/nekst-black.woff") format("woff");
+}

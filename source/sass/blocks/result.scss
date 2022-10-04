@@ -1,0 +1,41 @@
+.result {
+  margin-top: 0;
+
+  font-size: 14px;
+  line-height: 19px;
+  font-family: $ff-gilroy;
+  color: #333333;
+
+  @include vp-768 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.result__sum {
+  display: block;
+  width: 100%;
+  padding-top: 2px;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 20px;
+  font-family: $ff-nekst;
+
+  background-color: transparent;
+  border: none;
+
+  @include vp-768 {
+    padding-top: 8px;
+
+    font-size: 54px;
+    line-height: 49px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

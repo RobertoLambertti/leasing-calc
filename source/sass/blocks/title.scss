@@ -1,0 +1,14 @@
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 90%;
+  color: $color-default-black;
+
+  @include vp-768 {
+    font-size: 54px;
+    line-height: 49px;
+  }
+}
