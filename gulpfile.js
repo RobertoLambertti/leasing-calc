@@ -34,7 +34,7 @@ const copy = () => {
 }
 
 const svg = () => {
-  return gulp.src('./source/img/**/*.svg', {base: 'source'})
+  return gulp.src('source/img/**/*.svg', {base: 'source'})
     .pipe(imagemin([
       imagemin.svgo({
         plugins: [
@@ -43,7 +43,7 @@ const svg = () => {
         ]
       })
     ]))
-    .pipe(gulp.dest('./build/img'));
+    .pipe(gulp.dest('build/img'));
 }
 
 const sprite = () => {
@@ -54,12 +54,12 @@ const sprite = () => {
 };
 
 const img = () => {
-  return gulp.src('./source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 5}),
       imagemin.mozjpeg({progressive: true})
     ]))
-    .pipe(gulp.dest('./build/img/'))
+    .pipe(gulp.dest('build/img/'))
 }
 
 const createWebp = () => {
@@ -74,7 +74,7 @@ const html = () => {
 }
 
 const css = () => {
-  return gulp.src('./source/sass/style.scss')
+  return gulp.src('source/sass/style.scss')
   .pipe(plumber({
     errorHandler: function(err) {
       console.log(err);
@@ -98,7 +98,7 @@ const css = () => {
 const js = () => {
   return gulp.src(['source/js/main.js'])
     .pipe(webpackStream(webpackConfig))
-    .pipe(gulp.dest('build/js'))
+    .pipe(gulp.dest('build/js/'))
 };
 
 const refresh = (done) => {
