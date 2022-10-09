@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Калькулятор стоимости автомобиля в лизинг</title>
+    <meta name="description" content="Калькулятор стоимости автомобиля в лизинг поможет вам рассчитать стоимость договора лизинга и минимальный ежемесячный платеж">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="fonts/rouble.woff2" rel="preload" as="font">
+    <link href="fonts/gilroy-regular.woff2" rel="preload" as="font">
+    <link href="fonts/nekst-black.woff2" rel="preload" as="font">
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body class="page">
+    <header>
+      <h1 class="visually-hidden">Калькулятор стоимости автомобиля в лизинг</h1>
+    </header>
+
+    <main>
+      <form class="form" data-calc data-form action="https://eoj3r7f3r4ef6v4.m.pipedream.net" method="post">
+        <h2 class="form__title title">Рассчитайте стоимость автомобиля в лизинг</h2>
+
+        <ul class="form__fields">
+          <li class="form__field range" data-range>
+            <label class="range__label" for="sum">Желаемая сумма кредита</label>
+            <div class="range__field">
+              <input class="range__field-input" id="sum" name="sum" data-calc-sum data-form-sum data-max="6000000" data-min="2000000" data-range-field type="text" value="3300000">
+              <p class="range__field-label">₽</p>
+            </div>
+            <input class="range__slider" data-calc-sum data-range-slider type="range" step="20000" min="2000000" max="6000000">
+          </li>
+          <li class="form__field range range--percent" data-range>
+            <label class="range__label" for="contribution">Первоначальный взнос</label>
+            <div class="range__field">
+              <input class="range__field-input" id="contribution" name="contribution" data-calc-initial-percent data-form-initial data-max="60" data-min="10" data-range-field type="number" value="10" min="10" max="60">
+              <label class="range__field-label range__field-label--correction" for="contribution">%</label>
+              <p class="range__field-result" data-calc-initial>420 000 ₽</p>
+            </div>
+            <input class="range__slider" data-calc-initial-percent data-range-slider type="range" step="1" min="10" max="60">
+          </li>
+          <li class="form__field range" data-range>
+            <label class="range__label" for="term">Срок лизинга</label>
+            <div class="range__field">
+              <input class="range__field-input" id="term" name="term" data-calc-term data-max="60" data-min="1" data-range-field data-form-term type="text" value="60">
+              <p class="range__field-label">мес.</p>
+            </div>
+            <input class="range__slider" data-calc-term data-range-slider type="range" step="1" min="1" max="60">
+          </li>
+        </ul>
+        <ul class="form__results">
+          <li class="form__result result">
+            <label for="contract">Сумма договора лизинга</label>
+            <input class="result__sum" id="contract" name="contract" data-calc-contract type="text" value="4 467 313 ₽" size="10" readonly>
+          </li>
+          <li class="form__result result">
+            <label for="payment">Ежемесячный платеж от</label>
+            <input class="result__sum" id="payment" name="payment" data-calc-payment type="text" value="16 000 ₽" size="10" readonly>
+          </li>
+          <li class="form__result">
+            <!-- is-loading -->
+            <button class="form__submit button" type="submit" data-form-submit>
+              <span class="button__text">Оставить заявку</span>
+              <svg class="button__spinner spinner" width="30" height="30">
+                <use class="path" xlink:href="img/sprite.svg#spinner"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </form>
+    </main>
+
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
